@@ -1,0 +1,184 @@
+.header-list
+{
+  display: none;
+}
+  
+@media (max-width:576px) {
+  .header-list{
+  display: flex;
+  text-align: center;
+  max-height: 100%;
+  } 
+}
+
+
+.head-banner{
+  height: 800px;
+  background: url("https://github.com/hexschool/2022-web-layout-training/blob/main/2025-week3-4/banner.png?raw=true");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding-left: 200px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+
+
+  .head-banner .content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;   
+    text-align: left;
+}
+@media( max-width: 576px){
+  height: 480px;
+  background:url("https://github.com/hexschool/2022-web-layout-training/blob/main/2025-week3-4/banner-sm.png?raw=true");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  justify-content: center;
+  align-items: center;
+  padding-left: 0px;
+}
+}
+
+
+
+
+
+
+.product{
+  position: relative;
+  .product-text{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 8px 12px;
+    background-color: $primary-100;
+    font-size: 14px;
+    color: $primary-400
+  }
+}
+@media (max-width:767px){
+  .product-md-row{
+    margin-left:-8px;
+    margin-right: -8px;
+  }
+  .product-md-col{
+    min-width:316px;
+    padding-right: 8px;
+    padding-left: 8px;
+
+  }
+}
+.banner{
+  text-align: center;
+  background: url("https://github.com/hexschool/2022-web-layout-training/blob/main/2025-week3-4/banner-co-branded.png?raw=true");
+  padding: 100px 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative; 
+  overflow-x: hidden;
+  .star-img{
+    position: absolute;
+    top: 68px;
+    width: 48px;
+    left: calc(50% - 397px)
+    // 50%：從父元素的左邊界算起，往右一半。
+    // - 397px：再往左退回 397 像素。\
+    // 397 的由來是因urban的文字那個地方寬度為
+    // 634, 星星與文字的空間為32, 星星本身寬度48
+    // 所以星星的左上角距離文字中間的距離事 634/2 +34+ 48 
+}
+ .sparkle-img{
+  position: absolute;
+  width: 76px;
+  bottom: 132px;
+  right: calc(50% - 357px);
+  // 50%：從父元素的左邊界算起，往右一半。
+  // - 357px：再往右退回 357 像素。\
+  // urban的文字那個地方寬度為634
+  //sparkle 超過urban那段圖片的距離為40px
+  //總共距離為 634/2 + 40 = 357
+ }
+}
+@media( max-width:767px){
+  .banner{
+    padding: 64px 0;
+    background-image: url("https://github.com/hexschool/2022-web-layout-training/blob/main/2025-week3-4/banner-co-branded-sm.png?raw=true");
+  
+  .btn{
+    padding: 12px 24px;
+  }
+  .star-img{
+    top: 32px;
+    left:-20px;
+
+  }
+  .sparkle-img{
+    bottom: 104px;
+    right: -28px;
+  }
+  }
+}
+.newArrival{
+  text-align: center;
+  &-Card{
+    text-align: left;
+  }
+}
+.category{
+  position: relative;
+  .category-text{
+    position:absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left:0;
+    background-color: rgba( black, 0.4);
+    color:white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+
+  }
+}
+.inspiration{
+ &-row{
+  display: flex;
+  flex-wrap:wrap;
+  margin: -4px;
+}
+&-col-4{
+  width: calc( 100% / 12 * 4);
+  padding: 4px;
+}
+&-col-6{
+  width: calc( 100% / 12 * 6);
+  padding: 4px;
+}
+&-col-12{
+  width: 100%;
+  padding: 4px;
+}
+}
+@media( max-width:767px){
+  .inspiration-row{
+    flex-wrap: nowrap;
+    margin: 0 -8px;
+    img{
+      min-width: 300px;
+    }
+  }
+  .inspiration-col-4,
+  .inspiration-col-6,
+  .inspiration-col-12{
+    width: unset;
+    padding: 0 8px;
+  }
+
+}

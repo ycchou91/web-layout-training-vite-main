@@ -1,0 +1,44 @@
+.header{
+  background-image: url(https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week1/about.png);
+  background-repeat: no-repeat; /*背景不重複*/
+  background-size: cover;/*全面填滿*/
+  background-position: center;
+  padding: 152px 0 ;  /*(400-96)/2=152px*/
+  text-align: center;
+}
+
+.eng-title{
+  font-size: 28px;
+}
+
+
+@media (max-width:767px) {
+  .header{
+  padding: 87px 0 ; 
+  background-image:url(https://github.com/hexschool/2022-web-layout-training/blob/main/2025-week3-4/hero-sm.png?raw=true);  
+    background-size: cover;/*全面填滿*/
+  background-position: center;
+    text-align: center;
+}
+  .eng-title{
+  font-size: 20px;
+}
+}
+
+img{
+  vertical-align: middle; /*中間對其→就能清除圖片下方2-3px*/
+}
+
+.story a{
+  color: var(--primary-400);
+  text-underline-offset: 4px;/*底線下移4PX*/
+  display: block; /*設定成區塊元素，因為每一行都是獨立*/
+}
+
+.container{
+width: 856px;
+margin:  0 auto;
+}
+
+
+

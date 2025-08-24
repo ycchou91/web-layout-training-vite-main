@@ -1,0 +1,25 @@
+
+.breadcrumb-item+.breadcrumb-item::before{
+    content: "/";
+    padding: 0 12px;/*左右間距*/
+    color: $neutral-300;
+    font-weight: 700px;
+}
+
+.breadcrumb-item{
+    display: flex;
+    font-weight: 500px;
+}
+
+.breadcrumb-link{
+    color: $neutral-600;
+}
+
+@media(max-width:767px){
+  .breadcrumb-item+.breadcrumb-item::before{
+    padding: 0 8px;/*左右間距*/
+    }
+  .breadcrumb-item{
+    font-size: 14px;
+  }
+}

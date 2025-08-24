@@ -1,0 +1,42 @@
+.btn{
+    border-radius: 4px;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    cursor: pointer; /*改游標*/
+    border: none;
+    background-color: transparent;/*透明-transparent*/
+
+}
+
+@media(max-width:576px){
+  .btn{
+    padding: 8px 16px;
+  }
+
+}
+
+.btn-dark{
+    background-color: $neutral-900;
+    color: $neutral-0;
+}
+
+.btn-light{
+    border: 1px solid $neutral-900;
+}
+
+
+
+
+
+.page-item .btn{
+    padding: 8px 15px;
+    border-radius: 0px;
+    font-weight: 400;
+}
+
+.page-item .active{
+    background-color: var(--primary-300);
+    font-weight: 500;
+}
